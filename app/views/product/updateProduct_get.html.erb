@@ -1,2 +1,15 @@
 <h1>Product#updateProduct_get</h1>
-<p>Find me in app/views/product/updateProduct_get.html.erb</p>
+
+<form method="post">
+  <p>Name Product: <input name="name" type="text" value="<%=@product.name %>" required></p>
+  <p>Price: <input name="price" type="text" value="<%=@product.price %>"></p>
+  <br>
+  <p>Category 1: <input name="category0" type="text"></p>
+  <p>Category 2: <input name="category1" type="text"></p>
+  <p>Category 3: <input name="category2" type="text"></p>
+  <p>Category 4: <input name="category3" type="text"></p>
+  <p>Category 5: <input name="category4" type="text"></p>
+  <br>
+  <input type="submit" value="update">
+</form>
+

@@ -11,7 +11,7 @@ class AdministratorController < ApplicationController
     account.status=0
     account.email  = params[:email]
     account.password = params[:password]
-    account.customer_id = administrator.id
+    account.administrator_id = administrator.id
     account.save
     administrator.account_id = account.id
     administrator.save

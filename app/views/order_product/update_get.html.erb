@@ -1,0 +1,11 @@
+<h1>OrderProduct#update_get</h1>
+<br>
+<form method="post">
+  <p>Quantity: <input name="quantity" type="number" value="<%=@op.quantity %>" required></p>
+  <p>Unit Price: <input name="unit_price" type="number" value="<%=@op.unit_price %>" step="0.01" required></p>
+  <p>Name product: <select name="product_id">
+    <% for p in @product%>
+      <option value="<%=p.id %>"><%=p.name %></option>
+    <% end %></select></p>
+  <input type="submit" value="update">
+</form>
