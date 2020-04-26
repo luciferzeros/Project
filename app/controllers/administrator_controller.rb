@@ -32,3 +32,4 @@ class AdministratorController < ApplicationController
     end
   end
 end
+

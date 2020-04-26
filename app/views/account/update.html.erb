@@ -1,0 +1,13 @@
+<h1>UpdateAccount</h1>
+<form method="post">
+  <p>Email: <%=@user.email %> </p>
+  <% if @user %>
+    <p>Customer name: <%=@customer.customer_name %></p>
+  <% end %>
+  <% if @admin %>
+    <p>Admin name: <%=@admin.admin_name %></p>
+  <%end %>
+  <p>Old password: <input type="password" name="password_old" required></p>
+  <p>New password: <input type="password" name="password_old" required></p>
+  <p>Nhap lai password: <input type="password" name="password_confirmation"></p>
+</form>

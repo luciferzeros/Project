@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  root "account#index"
+  get "/login", to: "account#login"
+  post"/login", to: "account#verifyLogin"
+  get "/logout", to:"account#logout"
 
   get "/administrator", to: "administrator#index"
   get "/administrator/create", to: "administrator#create_get"
