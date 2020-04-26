@@ -1,0 +1,26 @@
+<h1>Order#update_get</h1>
+<% if @order %>
+  <form method="post">
+    <p>Date Created: <%=@order.date_created %></p>
+    <p>Date Shipped:<input type="date" name="date_shipped" autocomplete="on" value="<%=@order.date_shipped %>" required></p>
+    <p>Customer: <%=@customer.customer_name %></p>
+    <p>Status:
+      <select name="status">
+        <option value="pending">pending</option>
+        <option value="failed">failed</option>
+        <option value="processing">processing</option>
+        <option value="completed">completed</option>
+        <option value="canceled">canceled</option>
+        <option value="refunded">refunded</option>
+      </select>
+    </p>
+    <br>
+    <p>Shipping type: <%=@shipping_info.shipping_type %></p>
+    <p>Shipping cost: <%=@shipping_info.shipping_cost %></p>
+    <p>Shipping region: <%=@shipping_info.shipping_region %></p>
+    <p>Quantity Order product: <%=@orderProduct.quantity %></p>
+    <input type="submit" value="update">
+  </form>
+<%else %>
+<p style="color:#B00100">Khong co Order nay..!</p>
+<%end %>

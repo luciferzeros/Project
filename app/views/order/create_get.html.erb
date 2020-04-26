@@ -1,0 +1,33 @@
+<h1>Order#create_get</h1>
+<form method="post">
+  <p>Date Created:<input type="date" name="date_created" autocomplete="on" required></p>
+  <p>Date Shipped:<input type="date" name="date_shipped" autocomplete="on" required></p>
+  <p>Customer:
+    <select name="customer_id">
+      <% for c in @customer %>
+        <option value="<%=c.id %>"><%=c.customer_name %></option>
+      <% end %>
+    </select>
+  </p>
+  <p>Status:
+    <select name="status">
+      <option value="pending">pending</option>
+      <option value="failed">failed</option>
+      <option value="processing">processing</option>
+      <option value="completed">completed</option>
+      <option value="canceled">canceled</option>
+      <option value="refunded">refunded</option>
+    </select>
+  </p>
+  <br>
+  <p>Shipping type:<input type="text" name="shipping_type" autocomplete="on" required></p>
+  <p>Shipping cost:<input type="number" name="shipping_cost" autocomplete="on" required></p>
+  <p>Shipping region:<input type="text" name="shipping_region" autocomplete="on" required></p>
+  <p>Quantity Order product:
+    <select name="order_product_id" >
+      <%for op in @orderProduct%>
+        <option value="<%=op.id %>">Quantity: <%=op.quantity %></option>
+      <%end %>
+    </select></p>
+  <input type="submit" value="create">
+</form>
